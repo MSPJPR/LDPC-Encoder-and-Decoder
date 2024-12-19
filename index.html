@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDPC Encoder and Decoder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>LDPC Code Encoder and Decoder Visualizer</h1>
+  
+  <button id="themeToggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+
+  <div class="container">
+    <textarea id="inputData" placeholder="Enter binary data (e.g., 1010101)"></textarea>
+    <button onclick="encodeData()">Encode</button>
+    <div id="encodedOutput" class="output"></div>
+
+    <label for="errorRate">Error Rate (%):</label>
+    <input type="number" id="errorRate" min="0" max="100" value="10">
+    <button onclick="simulateNoise()">Simulate Noise</button>
+    <div id="noisyOutput" class="output"></div>
+
+    <button onclick="decodeData()">Decode</button>
+    <div id="decodedOutput" class="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
